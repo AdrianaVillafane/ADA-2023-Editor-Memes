@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeNeRaDoR dE mEmEs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/bcc472557c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="encabezado anverso">
+            <h1>Generador de Memes</h1>
+        </div>
+        <div class="botonera anverso">
+            <button id="seteoImagen anverso">
+                <i class="fa-solid fa-file-image "></i>
+                <h3>Imagen</h3>
+            </button>
+
+            <button id="seteoTexto anverso">
+                <i class="fa-solid fa-font"></i>
+                <h3>Texto</h3>
+            </button>
+            <button id="modoInverso anverso">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Modo Reverso</h3>
+            </button>
+
+        </div>
+
+    </header>
+    <main class="editor anverso">
+
+        <div class="right anverso">
+            <aside class="imagen anverso_hidden">
+                <button><i class="fa-solid fa-xmark"></i></button>
+                <h2>Imagen</h2>
+                <label for="url"> URL:</label>
+
+                <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="24"
+                    required>
+
+                
+                <label for="fondo">FONDO</label>
+                <input type="color" id="colorInput">
+               
+                <select name="fondo" id="fondo">
+                    <option value="ninguno">Ninguno</option>
+                    <option value="aclarar">Aclarar</option>
+                    <option value="oscurecer">Oscurecer</option>
+                    <option value="diferencia">Diferencia</option>
+                    <option value="luminosidad">Luminosidad</option>
+                    <option value="multiplicar">Multiplicar</option>
+                   
+                </select>
+                
+                <label for="brillo">BRILLO</label>
+                <input type="range" min="0" max="100" value="0" class="myRange"id="brightness-slider">
+                <label for="opacidad">OPACIDAD</label>
+                <input type="range" min="0" max="100" value="0" class="myRange">
+                <label for="contraste">CONTRASTE</label>
+                <input type="range" min="0" max="100" value="0" class="myRange">
+                <label for="desenfoque">DESENFOQUE</label>
+                <input type="range" min="0" max="100" value="0" class="myRange">
+
+                <label for="escala_grises">ESCALA DE GRISES</label>
+                <input type="range" min="0" max="100" value="0"class="myRange" id="grayscale-slider">
+
+                <label for="sepia">SEPIA</label>
+                <input type="range" min="0" max="100" value="0" class="myRange">
+
+                <label for="hue">HUE</label>
+                <input type="range" min="0" max="100" value="0" class="myRange">
+
+                <label for="saturacion">SATURADO</label>
+                <input type="range" min="0" max="100" value="0" class="myRange">
+
+                <label for="negativo">NEGATIVO</label>
+                <input type="range" min="0" max="100" value="0" class="myRange" id="myRange">
+                <button>Reestablecer Filtros</button>
+
+            </aside>
+        </div>
+
+
+
+
+
+        <div class="right">
+            <aside class="texto reverso_hidden">
+                <button><i class="fa-solid fa-xmark"></i></button>
+                <h2>Texto</h2>
+                <label for="superior">SUPERIOR</label>
+                <input type="text">
+                <input type="checkbox" id="texto_superior" name="text_sup" checked>
+                <label for="chekbox">Sin texto superior</label>
+                <label for="superior">INFERIOR</label>
+                <input type="text">
+                <input type="checkbox" id="texto_inferior" name="text_inf" checked>
+                <label for="chekbox">Sin texto inferior</label>
+                <label for="fuente">FUENTE</label>
+
+                <select name="font-family" id="font-family">
+                    <option value="arial">Arial</option>
+                    <option value="arial black">Arial Black</option>
+                    <option value="american typewriter">American Typewriter</option>
+                    <option value="andale mono">Andale Mono</option>
+                    <option value="comic sans ms">Comic Sans MS</option>
+                    <option value="helvetica">Helvetica</option>
+                    <option value="impact">Impact</option>
+                    <option value="verdana">Verdana</option>
+                    <option value="times new roman">Times New Roman</option>
+                </select>
+
+                <selec name="font-size" id="font-size">
+                    <input type="number" id="font-size" name="font-size" min="12" max="100">
+
+                </selec>
+                ACA VA LA ALINEACION
+
+                <label for="muestrario">Color:</label>
+                <input type="color" value="#ff0000" id="muestrario">
+            </aside>
+        </div>
+
+        <div id="generador">
+            <div id="textoSuperior">
+                <h2>Texto superior</h2>
+            </div>
+            <div id="meme">
+               
+
+            </div>
+            <div id="textoInferior">
+                <h2>Texto inferior</h2>
+            </div>
+        </div>
+
+
+      
+
+    </main>
+<footer>  <button id="botonDescarga">Descargar Meme</button>
+</footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

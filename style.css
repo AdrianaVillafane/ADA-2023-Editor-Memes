@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  height: 10rem;
+  background-color: rgb(139, 24, 116);
+  color: rgb(247, 149, 64);
+ 
+}
+h1{
+  text-shadow: 1px 1px;
+}
+.encabezado {
+ justify-content: center;
+  width: 30%;
+  margin: 0rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.botonera {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 30%;
+  margin: 0rem auto;
+  padding: 0.2rem 1rem;
+}
+button {
+  font-size: 10px;
+  background-color: rgb(247, 149, 64);
+  margin: 0 1rem;
+  padding: 0.8rem 1rem;
+ 
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+button:hover{
+  color: antiquewhite;
+  background-color: rgb(252, 79, 0);
+}
+
+i {
+  position: absolute;
+  left: 7px;
+}
+
+aside {
+  width: 14rem;
+  padding: 1rem;
+  margin: 5px;
+  background-color: #141616;
+  position: absolute;
+  top: 52;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  border: 3px solid #383838;
+  color: #ffffff !important;
+  
+}
+.fa-xmark{
+  font-size: 1rem;
+  position: absolute;
+  background-color: transparent;
+}
+
+
+.reverso_hidden {
+  display: none;
+}
+
+input {
+  font-size: 1.5 rem;
+  display: block;
+  padding: 5px;
+}
+
+
+main {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(183, 19, 117);
+}
+#generador {
+  width: 28rem;
+  height: 36rem;
+  border: 3px solid grey;
+  border-radius: 20px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column ;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+#textoSuperior {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+ background-color: rgb(247, 149, 64);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  
+}
+#meme{
+    height: 65%;
+    width: 28rem;
+    height: 25rem;
+   object-fit: cover;
+}
+
+#textoInferior {
+  width: 100%;
+  height: 15%;
+  text-align: center;
+ background-color: rgb(247, 149, 64);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius:20px ;
+
+}
+#botonDescarga {
+  display: block;
+  width: 5rem;
+  height: 3rem;
+  background-color: green;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+#colorInput {
+  background-color: #ffffff;
+
+  border: 1px solid #0b0808;
+   padding: 5px;
+  width: 50px;
+  height: 30px;
+}
+footer{
+  background-color: rgb(139, 24, 116);
+  width: 100%;
+  height: 4rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+}

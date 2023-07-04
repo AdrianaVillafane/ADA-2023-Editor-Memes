@@ -1,7 +1,18 @@
+
+const urlInput = document.getElementById('url-input');
+const memeImg = document.getElementById('meme-img');
+
+urlInput.addEventListener('input', (e)=> changeBackground(e));
+
+const changeBackground= (e)=>{
+  console.log(e.target.value)
+  memeImg.style.backgroundImage = `url(${e.target.value})`
+}
+
 //COLOR DE FONDO, conteiner de imagen
 // Obtengo los elementos del DOM
 let colorInput = document.getElementById("colorInput");
-let colorMeme = document.getElementById("meme");
+let colorMeme = document.getElementById("meme-img");
 
 // Agrego un evento de escucha al campo de entrada
 colorInput.addEventListener("input", function() {

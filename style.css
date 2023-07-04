@@ -105,11 +105,15 @@ main {
   border-top-right-radius: 20px;
   
 }
-#meme{
+#meme-img{
     height: 65%;
     width: 28rem;
     height: 25rem;
    object-fit: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+  
 }
 
 #textoInferior {

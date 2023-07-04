@@ -41,7 +41,7 @@
                 <h2>Imagen</h2>
                 <label for="url"> URL:</label>
 
-                <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="24"
+                <input type="url" name="url" id="url-input" placeholder="https://example.com" pattern="https://.*" size="24"
                     required>
 
                 
@@ -59,11 +59,11 @@
                 </select>
                 
                 <label for="brillo">BRILLO</label>
-                <input type="range" min="0" max="100" value="0" class="myRange"id="brightness-slider">
+                <input type="range" min="0" max="100" value="0"step= "0.1" class="myRange"id="brightness-slider">
                 <label for="opacidad">OPACIDAD</label>
                 <input type="range" min="0" max="100" value="0" class="myRange">
                 <label for="contraste">CONTRASTE</label>
-                <input type="range" min="0" max="100" value="0" class="myRange">
+                <input type="range" min="100" max="1000" value="0" class="myRange">
                 <label for="desenfoque">DESENFOQUE</label>
                 <input type="range" min="0" max="100" value="0" class="myRange">
 
@@ -131,7 +131,7 @@
             <div id="textoSuperior">
                 <h2>Texto superior</h2>
             </div>
-            <div id="meme">
+            <div id="meme-img">
                
 
             </div>

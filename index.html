@@ -41,13 +41,13 @@
                 <h2>Imagen</h2>
                 <label for="url"> URL:</label>
 
-                <input type="url" name="url" id="url-input" placeholder="https://example.com" pattern="https://.*" size="24"
-                    required>
+                <input type="url" name="url" id="url-input" placeholder="https://example.com" pattern="https://.*"
+                    size="24" required>
 
-                
+
                 <label for="fondo">FONDO</label>
                 <input type="color" id="colorInput">
-               
+
                 <select name="fondo" id="fondo">
                     <option value="ninguno">Ninguno</option>
                     <option value="aclarar">Aclarar</option>
@@ -55,32 +55,36 @@
                     <option value="diferencia">Diferencia</option>
                     <option value="luminosidad">Luminosidad</option>
                     <option value="multiplicar">Multiplicar</option>
-                   
+
                 </select>
-                
+                <h2>FILTROS</h2>
+
                 <label for="brillo">BRILLO</label>
-                <input type="range" min="0" max="100" value="0"step= "0.1" class="myRange"id="brightness-slider">
+                <input type="range" min="0" max="1" value="1" step="0.1" class="myRange" id="brightness-slider">
+
                 <label for="opacidad">OPACIDAD</label>
-                <input type="range" min="0" max="100" value="0" class="myRange">
+                <input type="range" min="0" max="1" value="0" step="0.1" class="myRange" id="opacity-slider">
+
                 <label for="contraste">CONTRASTE</label>
-                <input type="range" min="100" max="1000" value="0" class="myRange">
+                <input type="range" min="100%" max="1000%" value="100" step="100" class="myRange">
+
                 <label for="desenfoque">DESENFOQUE</label>
-                <input type="range" min="0" max="100" value="0" class="myRange">
+                <input type="range" min="0px" max="10px" value="0" step="0.1px" class="myRange">
 
                 <label for="escala_grises">ESCALA DE GRISES</label>
-                <input type="range" min="0" max="100" value="0"class="myRange" id="grayscale-slider">
+                <input type="range" min="0%" max="100%" value="0" step="1%" class="myRange" id="grayscale-slider">
 
                 <label for="sepia">SEPIA</label>
-                <input type="range" min="0" max="100" value="0" class="myRange">
+                <input type="range" min="0%" max="100%" value="0" step="1%" class="myRange">
 
                 <label for="hue">HUE</label>
-                <input type="range" min="0" max="100" value="0" class="myRange">
+                <input type="range" min="0deg" max="100" value="0" class="myRange">
 
                 <label for="saturacion">SATURADO</label>
-                <input type="range" min="0" max="100" value="0" class="myRange">
+                <input type="range" min="0" max="359deg" value="0" step="1deg" class="myRange">
 
                 <label for="negativo">NEGATIVO</label>
-                <input type="range" min="0" max="100" value="0" class="myRange" id="myRange">
+                <input type="range" min="100%" max="1000%" value="0" step="10%" class="myRange" id="myRange">
                 <button>Reestablecer Filtros</button>
 
             </aside>
@@ -132,7 +136,7 @@
                 <h2>Texto superior</h2>
             </div>
             <div id="meme-img">
-               
+
 
             </div>
             <div id="textoInferior">
@@ -141,11 +145,11 @@
         </div>
 
 
-      
+
 
     </main>
-<footer>  <button id="botonDescarga">Descargar Meme</button>
-</footer>
+    <footer> <button id="botonDescarga">Descargar Meme</button>
+    </footer>
 
     <script src="app.js"></script>
 </body>

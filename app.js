@@ -1,46 +1,72 @@
+//
 
-const urlInput = document.getElementById('url-input');
-const memeImg = document.getElementById('meme-img');
+const urlInput = document.getElementById("url-input");
+const memeImg = document.getElementById("meme-img");
 
-urlInput.addEventListener('input', (e)=> changeBackground(e));
+console.log(memeImg);
 
-const changeBackground= (e)=>{
-  console.log(e.target.value)
-  memeImg.style.backgroundImage = `url(${e.target.value})`
+urlInput.addEventListener("input", () => 
+  changeBackground())
+
+
+const changeBackground = () => {
+  console.log('funcion cambio color se ejecuta');
+
+  memeImg.style.backgroundImage = `url(${urlInput.value})`;
+};
+
+//FILTROS
+const filtros = () => {
+  memeImg.style.filter = `brightness(${brightInput.value}) opacity(${opacityInput.value}) blur(${blurInput.value}) contrast(${contrastInput.value}%) grayscale(${grayscaleInput.value}%) hue-rotate(${hueRotateInput.value}deg) sepia(${sepiaInput.value}%) saturate(${saturateInput.value}%) invert(${invertInput.value})`;
 }
 
 //COLOR DE FONDO, conteiner de imagen
 // Obtengo los elementos del DOM
-let colorInput = document.getElementById("colorInput");
-let colorMeme = document.getElementById("meme-img");
+const colorInput = document.getElementById("colorInput");
+
 
 // Agrego un evento de escucha al campo de entrada
-colorInput.addEventListener("input", function() {
+colorInput.addEventListener("input", function () {
   let color = colorInput.value;
-  colorMeme.style.backgroundColor = color;
+  memeImg.style.backgroundColor = color;
 });
 
-//ESCALA DE BRILLO-FUNCIONANDO
+//ESCALA DE BRILLO-
 // Obtener referencias a los elementos del DOM
-const brightnessSlider = document.getElementById('brightness-slider');
-const image = document.getElementById('image');
+const brightnessSlider = document.getElementById("brightness-slider");
+const image = document.getElementById("meme-img");
 
 // Manejar el evento de cambio del input range
-brightnessSlider.addEventListener('input', () => {
+brightnessSlider.addEventListener("input", () => {
   // Obtener el valor del input range
   const brightnessValue = brightnessSlider.value;
 
   // Aplicar el filtro de brillo a la imagen
-  image.style.filter = `brightness(${brightnessValue}%)`;
+  memeImg.style.filter = `brightness(${brightnessValue}%)`;
+filtros();
 });
+
+//OPACIDAD
+//Obtener datos 
+const opacitySlider = document.getElementById("opacity-slider");
+//Manejar el evento de cambio de input range
+opacitySlider.addEventListener("input", () => {
+  const opacityValue = opacitySlider.value;
+
+//Aplicar el filtro en la imagen
+memeImg.style.filter = `opacity(${opacityValue})`;
+filtros();
+});
+//Aplicar filtro a la imagen
+const opacityValue = opacitySlider.value;
+memeImg.style.filter = `opacity(${opacityValue})`;
 
 //ESCALA DE GRISES-FUNCIONANDO
 // Obtener referencias a los elementos del DOM
-const grayscaleSlider = document.getElementById('grayscale-slider');
-
+const grayscaleSlider = document.getElementById("grayscale-slider");
 
 // Manejar el evento de cambio del input range
-grayscaleSlider.addEventListener('input', () => {
+grayscaleSlider.addEventListener("input", () => {
   // Obtener el valor del input range
   const grayscaleValue = grayscaleSlider.value;
 

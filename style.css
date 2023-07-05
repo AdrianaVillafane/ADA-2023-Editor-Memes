@@ -63,10 +63,24 @@ aside {
   color: #ffffff !important;
   
 }
+label{
+  border: 2px solid grey;
+  border-radius: 5px;
+margin: 0.5rem;
+
+  box-shadow: 2px 2px 1px 0px rgb(183, 19, 117);
+}
+#colorInput::-webkit-color-swatch {
+  border: none;
+  border-radius: 30%;
+}
+
+
 .fa-xmark{
   font-size: 1rem;
   position: absolute;
   background-color: transparent;
+  right: 3px;
 }
 
 /*MODO INVERSO*/
@@ -151,7 +165,10 @@ footer{
   
 }
 
-
+/*input[type="color"], input[type="color"]::-webkit-color-swatch-wrapper 
+input[type="color"]::-webkit-color-swatch{
+  border-radius: 50%;
+}
 
 /*INPUT*/
 /*

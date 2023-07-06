@@ -139,18 +139,18 @@ saturationSlider.addEventListener("input",() => {
 
 
 // NEGATIVO
-// Obtener datos
+// Obtener referencias a los elementos del DOM
 const invertSlider = document.getElementById("invert-slider");
 
 // Manejar el evento de cambio del input range
 invertSlider.addEventListener("input", () => {
   // Obtener el valor del input range
   const invertValue = invertSlider.value;
-  // Aplicar filtro a la imagen
-  memeImg.style.filter = `invert(${invertValue})`;
+
+  // Aplicar el filtro de escala de grises a la imagen
+  memeImg.style.filter = `invert(${invertValue}%)`;
   filtros();
 });
-
 
 
 

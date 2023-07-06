@@ -15,11 +15,6 @@ const changeBackground = () => {
   memeImg.style.backgroundImage = `url(${urlInput.value})`;
 };
 
-//FILTROS
-const filtros = () => {
-  memeImg.style.filter = `brightness(${brightInput.value}) opacity(${opacityInput.value}) blur(${blurInput.value}) contrast(${contrastInput.value}%) grayscale(${grayscaleInput.value}%) hue-rotate(${hueRotateInput.value}deg) sepia(${sepiaInput.value}%) saturate(${saturateInput.value}%) invert(${invertInput.value})`;
-}
-
 //COLOR DE FONDO, conteiner de imagen
 // Obtengo los elementos del DOM
 const colorInput = document.getElementById("colorInput");
@@ -30,6 +25,11 @@ colorInput.addEventListener("input", function () {
   let color = colorInput.value;
   memeImg.style.backgroundColor = color;
 });
+
+//FILTROS
+const filtros = () => {
+  memeImg.style.filter = `brightness(${brightInput.value}) opacity(${opacityInput.value}) blur(${blurInput.value}) contrast(${contrastInput.value}%) grayscale(${grayscaleInput.value}%) hue-rotate(${hueRotateInput.value}deg) sepia(${sepiaInput.value}%) saturate(${saturateInput.value}%) invert(${invertInput.value})`;
+}
 
 //ESCALA DE BRILLO-
 // Obtener referencias a los elementos del DOM
@@ -60,6 +60,29 @@ filtros();
 //Aplicar filtro a la imagen
 const opacityValue = opacitySlider.value;
 memeImg.style.filter = `opacity(${opacityValue})`;
+//CONTRASTE
+//obtengo datos
+const contrastSlider = document.getElementById("contrast-slider");
+//evento cambio de input rango
+contrastSlider.addEventListener("input", () => {
+  const contrastValue = contrastSlider.value;
+
+  //aplico filtro a la imagen
+  memeImg.style.filter = `contrast(${contrastValue})`;
+  filtros();
+
+})
+//DESENFOQUE (BLUR)
+//obtengo datos
+const blurSlider = document.getElementById("blur-slider");
+//evento cambio de input rango
+blurSlider.addEventListener("input", () => {
+  const blurValue = blurSlider.value;
+  //aplico a imagen
+  memeImg.style.filter = `blur(${blurValue})`
+  filtros();
+})
+
 
 //ESCALA DE GRISES-FUNCIONANDO
 // Obtener referencias a los elementos del DOM
@@ -71,5 +94,35 @@ grayscaleSlider.addEventListener("input", () => {
   const grayscaleValue = grayscaleSlider.value;
 
   // Aplicar el filtro de escala de grises a la imagen
-  image.style.filter = `grayscale(${grayscaleValue}%)`;
+  memeImg.style.filter = `grayscale(${grayscaleValue}%)`;
+  filtros();
 });
+//SEPIA
+//Obtener datos
+const sepiaSlider = document.getElementById("sepia-slider");
+
+//manejar el evento de cambio del input range
+sepiaSlider.addEventListener("input",() => {
+  //obtener el valor del input range
+  const sepiaValue = sepiaSlider.value;
+  //aplico filtro a la imagen
+  memeImg.style.filter = `sepia(${sepiaValue})`;
+  filtros();
+})
+//HUE
+//datos
+const hueSlider = document.getElementById("hue-slider");
+//evento
+hueSlider.addEventListener("input",() => {
+  //obtengo valor del input
+  const hueValue = hueSlider.value;
+  //aplico en la img
+  memeImg.style.filter =`hue(${hueValue})`;
+  filtros();
+})
+
+
+//SATURACION
+
+
+//NEGATIV

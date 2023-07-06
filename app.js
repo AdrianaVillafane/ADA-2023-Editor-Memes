@@ -38,6 +38,7 @@ const image = document.getElementById("meme-img");
 
 // Manejar el evento de cambio del input range
 brightnessSlider.addEventListener("input", () => {
+  console.log('funcion brillo  se ejecuta');
   // Obtener el valor del input range
   const brightnessValue = brightnessSlider.value;
 
@@ -51,6 +52,7 @@ filtros();
 const opacitySlider = document.getElementById("opacity-slider");
 //Manejar el evento de cambio de input range
 opacitySlider.addEventListener("input", () => {
+  console.log('funcion opacidad se ejecuta');
   const opacityValue = opacitySlider.value;
 
 //Aplicar el filtro en la imagen
@@ -123,6 +125,35 @@ hueSlider.addEventListener("input",() => {
 
 
 //SATURACION
+//datos
+const saturationSlider = document.getElementById("saturation-slider");
+//
+saturationSlider.addEventListener("input",() => {
+  //obtengo valor del input
+  const saturationValue = saturationSlider.value;
+  //aplico en la img
+  memeImg.style.filter = `saturation(${saturationValue})`;
+  filtros();
+})
 
 
-//NEGATIV
+
+// NEGATIVO
+// Obtener datos
+const invertSlider = document.getElementById("invert-slider");
+
+// Manejar el evento de cambio del input range
+invertSlider.addEventListener("input", () => {
+  // Obtener el valor del input range
+  const invertValue = invertSlider.value;
+  // Aplicar filtro a la imagen
+  memeImg.style.filter = `invert(${invertValue})`;
+  filtros();
+});
+
+
+
+
+const downloadMeme = () => {  domtoimage.toBlob(meme).then(function (blob) {    window.saveAs(blob, "mi-meme.png");  });};  // FUNCIÓN PARA DESCARGA JS
+const downloadButton = document.getElementById("download-button");
+downloadButton.addEventListener("click", downloadMeme);

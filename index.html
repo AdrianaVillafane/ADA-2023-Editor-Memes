@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/bcc472557c.js" crossorigin="anonymous"></script>
+    <script      src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"      integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="      crossorigin="anonymous"      referrerpolicy="no-referrer"    ></script>      <script      src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"      integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="      crossorigin="anonymous"      referrerpolicy="no-referrer"    ></script>
 </head>
 
 <body>
@@ -83,10 +84,10 @@
                 <input type="range" min="0deg" max="100" value="0" class="myRange" id="hue-slider">
 
                 <label for="saturacion">SATURADO</label>
-                <input type="range" min="0" max="359deg" value="0" step="1deg" class="myRange">
+                <input type="range" min="0" max="359deg" value="0" step="1deg" class="myRange" id="saturation-slider">
 
                 <label for="negativo">NEGATIVO</label>
-                <input type="range" min="100%" max="1000%" value="0" step="10%" class="myRange" id="myRange">
+                <input type="range" min="100%" max="1000%" value="0" step="10%" class="myRange" id="myRange" id="invert-slider">
                 <button>Reestablecer Filtros</button>
 
             </aside>
@@ -150,7 +151,8 @@
 
 
     </main>
-    <footer> <button id="botonDescarga">Descargar Meme</button>
+    <footer> <button id="download-button">Descargar Meme</button>
+
     </footer>
 
     <script src="app.js"></script>

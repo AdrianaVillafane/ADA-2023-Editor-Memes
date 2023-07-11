@@ -1,47 +1,78 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+body {
     background-color: grey;
     display: flex;
+    font-family: "Josefin Sans", sans-serif;
+    justify-content: flex-end;
 }
-header{
-    background-color: blueviolet;
+/*contenedor imagen+texto sup+tex inf*/
+.container {
+    border: 5px solid rgb(12, 9, 9);
+    width: 43rem;
+    background-color: yellowgreen;
+    display: flex;
+    flex-direction: column;
+}
+/*titulo generador meme*/
+header {
+    background-color: rgb(16, 6, 26);
+    color: antiquewhite;
+    text-align: center;
+}
+.meme-container {
+    width: 100%;
+    height: 40rem;
+    background-color: fuchsia;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.textoSuperior {
+    height: 4rem;
+    background-color: #383838;
+    color: antiquewhite;
+    text-align: center;
+    padding: 22px;
+}
+.meme-img {
+    height: 31rem;
+    background-color: antiquewhite;
 }
 
-main{
-    background-color: aqua;
+.textoInferior {
+    height: 4rem;
+    background-color: #383838;
+    color: antiquewhite;
+    text-align: center;
+    padding-top: 22px;
 }
-aside{
-    font-size: 22px;
+
+.contenedor_aside {
+    font-size: 16px;
     width: 20rem;
     padding: 0.5rem;
     margin: 10px 10px;
     justify-content: center;
     background-color: #141616;
-   border: 3px solid #383838;
+    border: 3px solid #383838;
     color: #ffffff !important;
-    overflow: auto;
     border-radius: 10px;
-   
 }
-.colorInput{
+.colorInput {
     width: 40px;
     height: 40px;
     background-color: transparent;
     border: none;
-  }
-  .colorInput::-webkit-color-swatch {
+}
+.colorInput::-webkit-color-swatch {
     border: none;
     border-radius: 50%;
-  
-  }
-  .colorInput::-webkit-color-swatch-wrapper{
+}
+.colorInput::-webkit-color-swatch-wrapper {
     border-radius: 50%;
     padding: 0;
-  }
-  
-footer{
-    background-color: brown;
 }

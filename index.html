@@ -1,72 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Adriana Villafane">
+    <meta name="description"
+        content="Generador de memes realizado por Adriana Villafane, durante su cursada en ADA 2023">
+    <meta property="og:title" content="Generador de memes, Adriana Villafane">
+    <meta property="og:type" content="Muestra de proyectos realizados por Adriana Villafane">
+    <meta property="og:image" content="pagina deployada">
+    <meta property="og:url" content="pagina deployada">
+    <meta name="generador_de_memes" content="Aplicacion_para_generar_memes" <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
     <title>GeNeRaDoR dE MeMeS</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/bcc472557c.js" crossorigin="anonymous"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
-      integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
-      integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+
 <body>
-    <div>
+    <div class="container">
         <header>
             <div class="encabezado">
                 <h1>Generador de Memes</h1>
             </div>
+
             <div class="botonera">
                 <button id="img-btn">
-                    <i class="fa-solid fa-file-image "></i>
-                  Imagen
+                    <i class="fa-solid fa-file-image ">Imagen</i>
+
                 </button>
-    
+
                 <button id="text-btn">
-                    <i class="fa-solid fa-font"></i>
-                    Texto
+                    <i class="fa-solid fa-font">Texto</i>
+
                 </button>
                 <button id="mode-btn">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    Modo Inverso
+                    <i class="fa-solid fa-lightbulb">Modo Oscuro</i>
+
                 </button>
-    
+
             </div>
-    
+
         </header>
         <main>
-            <div id="meme-container">
-                <p class="textoSuperior"id="top-text">TOP TEXT</p>
-               
-                <div id="meme-img">
-    
-               </div>
+            <div id="meme-container" class="meme-container">
+                <p class="textoSuperior" id="top-text">TOP TEXT</p>
+
+                <div id="meme-img" class="meme-img">
+.
+                </div>
                 <p class="textoInferior" id="bottom-text">
-                  BOTTOM TEXT
-            </p>
+                    BOTTOM TEXT
+                </p>
             </div>
-    
-    
+
+
             <button id="download-btn">Descargar Meme</button>
-    
+            <span>Hecho por Adriana Villafañe</span>
         </main>
       
     </div>
-    <aside>
-        <div class="right anverso">
+    <div class="contenedor_aside">
+        <div class="aside_imgen">
             <aside class="imagen anverso_hidden">
                 <div class="xBoton">
-                <button><i class="fa-solid fa-xmark" id="xImg"></i></button>
+                    <button><i class="fa-solid fa-xmark" id="xImg"></i></button>
                 </div>
                 <h2>Imagen</h2>
                 <label for="url"> URL:</label>
@@ -76,7 +87,8 @@
 
 
                 <label for="fondo">FONDO</label>
-                <input type="color" class="colorInput" id="colorInput">
+                <input type="color" class="colorInput" id="color-picker">
+                <span id="color-name"></span>
 
                 <select name="fondo" id="fondo">
                     <option value="ninguno">Ninguno</option>
@@ -96,7 +108,7 @@
                 <input type="range" min="0" max="1" value="1" step="0.1" class="myRange" id="opacity-slider">
 
                 <label for="contraste">CONTRASTE</label>
-                <input type="range" min="100%" max="1000%" value="100" step="100" class="myRange"id="contrast-slider">
+                <input type="range" min="100%" max="1000%" value="100" step="100" class="myRange" id="contrast-slider">
 
                 <label for="desenfoque">DESENFOQUE</label>
                 <input type="range" min="0px" max="10px" value="0" step="0.1px" class="myRange" id="blur-slider">
@@ -114,7 +126,7 @@
                 <input type="range" min="0" max="359deg" value="0" step="1deg" class="myRange" id="saturation-slider">
 
                 <label for="negativo">NEGATIVO</label>
-                <input type="range" min="100%" max="1000%" value="0" step="10%" class="myRange"  id="invert-slider">
+                <input type="range" min="100%" max="1000%" value="0" step="10%" class="myRange" id="invert-slider">
                 <button>Reestablecer Filtros</button>
 
             </aside>
@@ -124,7 +136,7 @@
 
 
 
-        <div class="right">
+        <div class="aside_texto">
             <aside class="texto reverso_hidden">
                 <button><i class="fa-solid fa-xmark"></i></button>
                 <h2>Texto</h2>
@@ -157,15 +169,13 @@
                 ACA VA LA ALINEACION
 
                 <label for="muestrario">Color:</label>
-                <input type="color" value="#ff0000" id="muestrario">
+                <input type="color" value="#ff0000" class="colorInput" id="muestrario">
             </aside>
         </div>
-    </aside>
-    <footer> 
-    
-    </footer>
+    </div>
 
     <script src="app.js"></script>
-    
+
 </body>
+
 </html>

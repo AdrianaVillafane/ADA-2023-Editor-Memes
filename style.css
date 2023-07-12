@@ -3,24 +3,43 @@
     padding: 0;
 }
 body {
-    background-color: grey;
+    background-color: #3F2E3E;
     display: flex;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     justify-content: flex-end;
+  
 }
 /*contenedor imagen+texto sup+tex inf*/
 .container {
     border: 5px solid rgb(12, 9, 9);
-    width: 48rem;
+    width: 52rem;
     background-color: yellowgreen;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+   
 }
 /*titulo generador meme*/
 header {
     background-color: rgb(16, 6, 26);
-    color: antiquewhite;
+    color: #EFE1D1;
     text-align: center;
+    font-family: 'Kablammo', cursive;
+    padding: 10px;
+  
+}
+
+button {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: grey;
+    
+}
+.download-btn, .restablecer-btn{
+    margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 .meme-container {
     width: 100%;
@@ -29,28 +48,31 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
 }
 .textoSuperior {
     height: 4rem;
-    background-color: #383838;
+
     color: antiquewhite;
     text-align: center;
     padding: 22px;
 }
 .meme-img {
     height: 31rem;
-    background-color: antiquewhite;
+    background-color: #3f2e3e;
 }
 
 .textoInferior {
     height: 4rem;
-    background-color: #383838;
     color: antiquewhite;
     text-align: center;
     padding-top: 22px;
 }
+.text-container{
+    background-color: #A78295;
+    color: #331d2c;
+    font-size: 30px;
 
+}
 .contenedor_aside {
     font-size: 14px;
     width: 16rem;
@@ -62,31 +84,34 @@ header {
     color: #ffffff !important;
     border-radius: 10px;
 }
-input{
-   padding: 10px;
-   display: block;
+input {
+    padding: 10px;
+    display: block;
 }
-.colorInput {
+.color-input {
     width: 40px;
     height: 40px;
     background-color: transparent;
     border: none;
 }
-.colorInput::-webkit-color-swatch {
+.color-input::-webkit-color-swatch {
     border: none;
     border-radius: 50%;
 }
-.colorInput::-webkit-color-swatch-wrapper {
+.color-input::-webkit-color-swatch-wrapper {
     border-radius: 50%;
     padding: 0;
 }
 .aside-imagen {
-text-align: left;
-margin: 10px;
-padding: 10px;
-font-size: 20px;
-
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
 }
-.aside-texto{
+.aside-texto {
     display: none;
+}
+main {
+    justify-content: center;
+    align-items: center;
 }

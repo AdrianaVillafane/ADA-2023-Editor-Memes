@@ -10,21 +10,7 @@
 
 
 
-
-
-//boton de color
-
-const colorPicker = document.getElementById("color-picker");
-const colorName = document.getElementById("color-name");
-
-const cambiarFondoMeme = () => {
-  let colorElegido = colorPicker.value;
-  colorName.innerHTML = `${colorElegido}`;
-};
-
-colorPicker.addEventListener("input", () => cambiarFondoMeme());
-
-//
+//URL
 
 const urlInput = document.getElementById("url-input");
 const memeImg = document.getElementById("meme-img");
@@ -41,9 +27,23 @@ const changeBackground = () => {
   memeImg.style.backgroundImage = `url(${urlInput.value})`;
 };
 
+
+//boton de color
+
+const colorPicker = document.getElementById("color-picker");
+const colorName = document.getElementById("color-name");
+
+const cambiarFondoMeme = () => {
+  let colorElegido = colorPicker.value;
+  colorName.innerHTML = `${colorElegido}`;
+};
+
+colorPicker.addEventListener("input", () => cambiarFondoMeme());
+
+
 //COLOR DE FONDO, conteiner de imagen
 // Obtengo los elementos del DOM
-const colorInput = document.getElementById("colorInput");
+const colorInput = document.getElementById("color-picker");
 
 
 // Agrego un evento de escucha al campo de entrada
@@ -182,6 +182,37 @@ invertSlider.addEventListener("input", () => {
   filtros();
 });
 
+
+//TEXTO
+
+const topTextInput = document.getElementById("top-text-input");
+const bottomTextInput = document.getElementById("bottom-text-input");
+
+const topText = document.getElementById("top-text");
+const bottomText = document.getElementById("bottom-text");
+
+topTextInput.addEventListener("change", () => hideTopText());
+bottomTextInput.addEventListener("change", () => hideBottomText());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //DESCARGA MEME
 
 const downloadButton = document.getElementById("download-btn");
@@ -194,14 +225,3 @@ const downloadMeme = () => {
     window.saveAs(blob, "mi-meme.png");
   });
 };
-
-//TEXTO
-
-const topTextInput = document.getElementById("top-text-input");
-const bottomTextInput = document.getElementById("bottom-text-input");
-
-const topText = document.getElementById("top-text");
-const bottomText = document.getElementById("bottom-text");
-
-topTextInput.addEventListener("change", () => hideTopText());
-bottomTextInput.addEventListener("change", () => hideBottomText());

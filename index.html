@@ -15,9 +15,13 @@
     <meta property="og:url" content="pagina deployada">
     <meta name="generador_de_memes" content="Aplicacion_para_generar_memes" <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&display=swap"
+        rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
     <title>GeNeRaDoR dE MeMeS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
@@ -57,21 +61,21 @@
         </header>
         <main>
             <div id="meme-container" class="meme-container">
-                <p class="textoSuperior" id="top-text">TOP TEXT</p>
+                <p class="text-container textoSuperior" id="top-text">TOP TEXT</p>
 
                 <div id="meme-img" class="meme-img">
-.
+                    .
                 </div>
-                <p class="textoInferior" id="bottom-text">
+                <p class="text-container textoInferior" id="bottom-text">
                     BOTTOM TEXT
                 </p>
             </div>
 
 
-            <button id="download-btn">Descargar Meme</button>
+            <button id="download-btn" class="download-btn">Descargar Meme</button>
             <span>Hecho por Adriana Villafañe</span>
         </main>
-      
+
     </div>
     <div class="contenedor_aside">
         <div class="aside-imgen">
@@ -87,7 +91,7 @@
 
 
                 <label for="fondo">FONDO</label>
-                <input type="color" class="colorInput" id="color-picker">
+                <input type="color" class="color-input" id="color-picker">
                 <span id="color-name"></span>
 
                 <select name="fondo" id="fondo">
@@ -127,7 +131,7 @@
 
                 <label for="negativo">NEGATIVO</label>
                 <input type="range" min="100%" max="1000%" value="0" step="10%" class="myRange" id="invert-slider">
-                <button>Reestablecer Filtros</button>
+                <button class="restablecer-btn">Reestablecer Filtros</button>
 
             </aside>
         </div>

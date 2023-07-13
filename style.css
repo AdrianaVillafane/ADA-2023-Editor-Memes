@@ -73,6 +73,15 @@ button {
     font-size: 30px;
 
 }
+.contenedor-color-input{
+    display: flex;
+    justify-content: space-between;
+}
+
+span{
+    border: 1px solid grey;
+    background-color: #A78295;
+}
 .contenedor_aside {
     font-size: 14px;
     width: 16rem;
@@ -106,10 +115,17 @@ input {
     text-align: left;
     margin: 10px;
     padding: 10px;
-    font-size: 20px;
+      border: 2px solid grey;
+    border-radius: 20px;
+  
 }
 .aside-texto {
-    display: none;
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid grey;
+    border-radius: 20px;
+  
 }
 main {
     justify-content: center;

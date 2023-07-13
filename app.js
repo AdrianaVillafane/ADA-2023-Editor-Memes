@@ -185,3 +185,18 @@ const downloadMeme = () => {
         window.saveAs(blob, "mi-meme.png");
     });
 };
+
+
+
+
+
+//fuentes
+const fontSelector = document.getElementById("font-selector");
+console.log(fontSelector.value);
+
+const changeFontFamily = () => {
+  topText.style.fontFamily = `${fontSelector.value}`;
+  bottomText.style.fontFamily = `${fontSelector.value}`;
+};
+
+fontSelector.addEventListener("change", () => changeFontFamily());

@@ -19,9 +19,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&display=swap"
         rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
     <title>GeNeRaDoR dE MeMeS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
@@ -78,7 +78,7 @@
 
     </div>
     <div class="contenedor_aside">
-        <div class="aside-imgen">
+        <div class="aside-imagen">
             <aside class="imagen anverso_hidden">
                 <div class="xBoton">
                     <button><i class="fa-solid fa-xmark" id="xImg"></i></button>
@@ -91,10 +91,11 @@
 
 
                 <label for="fondo">FONDO</label>
-                <input type="color" class="color-input" id="color-picker">
-                <span id="color-name"></span>
-
-                <select name="fondo" id="fondo">
+                <div class="contenedor-color-input">
+                    <input type="color" value="rgb(223,114,114)" class="color-input" id="color-picker">
+                    <span id="color-name"></span>
+                </div>
+                <select name="fondo" id="filtros-fondo">
                     <option value="ninguno">Ninguno</option>
                     <option value="aclarar">Aclarar</option>
                     <option value="oscurecer">Oscurecer</option>
@@ -127,11 +128,11 @@
                 <input type="range" min="0deg" max="359deg" value="0deg" step="1deg" class="myRange" id="hue-slider">
 
                 <label for="saturacion">SATURADO</label>
-                <input type="range" min="100%" max="1000%" value="100%" step="10%" class="myRange" id="saturation-slider">
+                <input type="range" min="100" max="1000" value="100" step="10" class="myRange" id="saturation-slider">
 
                 <label for="negativo">NEGATIVO</label>
                 <input type="range" min="0" max="1" value="1" step="0.1" class="myRange" id="invert-slider">
-                
+
                 <button class="restablecer-btn">Reestablecer Filtros</button>
 
             </aside>
@@ -143,38 +144,55 @@
 
         <div class="aside-texto">
             <aside class="texto reverso_hidden">
-                <button><i class="fa-solid fa-xmark"></i></button>
+                <button>
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
                 <h2>Texto</h2>
+
                 <label for="superior">SUPERIOR</label>
-                <input type="text">
-                <input type="checkbox" id="top-text-input" name="text_sup" checked>
-                <label for="chekbox">Sin texto superior</label>
-                <label for="superior">INFERIOR</label>
-                <input type="text">
-                <input type="checkbox" id="bottom-text-input" name="text_inf" checked>
-                <label for="chekbox">Sin texto inferior</label>
-                <label for="fuente">FUENTE</label>
 
-                <select name="font-family" id="font-family">
-                    <option value="arial">Arial</option>
-                    <option value="arial black">Arial Black</option>
-                    <option value="american typewriter">American Typewriter</option>
-                    <option value="andale mono">Andale Mono</option>
-                    <option value="comic sans ms">Comic Sans MS</option>
-                    <option value="helvetica">Helvetica</option>
-                    <option value="impact">Impact</option>
-                    <option value="verdana">Verdana</option>
-                    <option value="times new roman">Times New Roman</option>
-                </select>
+                <input type="text" id="top-text-input">
+                <fieldset>
+                    <input type="checkbox" name="text_sup" checked>
+                    <label for="chekbox">Sin texto superior</label>
+                    </fielset>
 
-                <selec name="font-size" id="font-size">
-                    <input type="number" id="font-size" name="font-size" min="12" max="100">
+                    <label for=inferior">INFERIOR</label>
+                    <input type="text" id="botton-text-btn">
 
-                </selec>
-                ACA VA LA ALINEACION
+                    <fieldset>
+                    <input type="checkbox" id="bottom-text-input" name="text_inf" checked>
+                    <label for="chekbox">Sin texto inferior</label>
+                    </fieldset>
 
-                <label for="muestrario">Color:</label>
-                <input type="color" value="#ff0000" class="colorInput" id="muestrario">
+                    <label for="fuente">FUENTE</label>
+
+                    <select name="font-family" id="font-selector">
+                        <option value="arial">Arial</option>
+                        <option value="arial black">Arial Black</option>
+                        <option value="american typewriter">American Typewriter</option>
+                        <option value="andale mono">Andale Mono</option>
+                        <option value="comic sans ms">Comic Sans MS</option>
+                        <option value="helvetica">Helvetica</option>
+                        <option value="impact">Impact</option>
+                        <option value="verdana">Verdana</option>
+                        <option value="times new roman">Times New Roman</option>
+                    </select>
+
+                    <selec name="font-size" id="font-size">
+                        <input type="number" id="font-size" name="font-size" min="12" max="100">
+
+                    </selec>
+
+
+                    <i class="fa-solid fa-align-left"></i>
+                    <i class="fa-solid fa-align-center"></i>
+                    <i class="fa-solid fa-align-right"></i>
+
+                    <label for="color-fuente">Color:</label>
+                    <input type="color" value="#ff0000" class="color-input" id="color-fuente">
+                    <label for="color-fondo-fuente">Fondo</label>
+                    <input type="color" value="#efe1d1" class="color-input" id="color-fondo">
             </aside>
         </div>
     </div>

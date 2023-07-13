@@ -124,13 +124,14 @@
                 <input type="range" min="0%" max="100%" value="0" step="1%" class="myRange" id="sepia-slider">
 
                 <label for="hue">HUE</label>
-                <input type="range" min="0deg" max="100" value="0" class="myRange" id="hue-slider">
+                <input type="range" min="0deg" max="359deg" value="0deg" step="1deg" class="myRange" id="hue-slider">
 
                 <label for="saturacion">SATURADO</label>
-                <input type="range" min="0" max="359deg" value="0" step="1deg" class="myRange" id="saturation-slider">
+                <input type="range" min="100%" max="1000%" value="100%" step="10%" class="myRange" id="saturation-slider">
 
                 <label for="negativo">NEGATIVO</label>
-                <input type="range" min="100%" max="1000%" value="0" step="10%" class="myRange" id="invert-slider">
+                <input type="range" min="0" max="1" value="1" step="0.1" class="myRange" id="invert-slider">
+                
                 <button class="restablecer-btn">Reestablecer Filtros</button>
 
             </aside>

@@ -29,8 +29,9 @@ header {
 button {
     margin: 5px;
     padding: 5px;
-    background-color: #a78295;
+    background-color: #383838;
 }
+
 .download-btn,
 .restablecer-btn {
     margin-left: auto;
@@ -79,7 +80,7 @@ span {
 }
 .contenedor_aside {
     font-size: 12px;
-    line-height: 2;
+   
     width: 16rem;
     padding: 0.8rem;
     margin: 10px 10px;
@@ -92,6 +93,7 @@ span {
 input {
     padding: 8px;
     display: block;
+    background-color: #383838;
 }
 .color-input {
     width: 40px;
@@ -123,6 +125,7 @@ input {
     padding: 10px;
     border: 2px solid grey;
     border-radius: 20px;
+    line-height: 2.8;
 }
 .checkbox {
     display: flex;

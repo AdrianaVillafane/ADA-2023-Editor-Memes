@@ -92,7 +92,7 @@
 
                 <label for="fondo">FONDO</label>
                 <div class="contenedor-color-input">
-                    <input type="color" value="rgb(223,114,114)" class="color-input" id="color-picker">
+                    <input type="color" value="#ff0000" class="color-input" id="color-picker">
                     <span id="color-name"></span>
                 </div>
                 <select name="fondo" id="filtros-fondo">
@@ -161,8 +161,8 @@
                     <input type="text" id="botton-text-btn">
 
                     <fieldset>
-                    <input type="checkbox" id="bottom-text-input" name="text_inf" checked>
-                    <label for="chekbox">Sin texto inferior</label>
+                        <input type="checkbox" id="bottom-text-input" name="text_inf" checked>
+                        <label for="chekbox">Sin texto inferior</label>
                     </fieldset>
 
                     <label for="fuente">FUENTE</label>
@@ -184,15 +184,25 @@
 
                     </selec>
 
-
-                    <i class="fa-solid fa-align-left"></i>
-                    <i class="fa-solid fa-align-center"></i>
-                    <i class="fa-solid fa-align-right"></i>
-
-                    <label for="color-fuente">Color:</label>
+                    <fieldset>
+                       <button class="alineacion"> <i class="fa-solid fa-align-left"></i></button>
+                       <button class="alineacion"><i class="fa-solid fa-align-center"></i></button> 
+                       <button class="alineacion">  <i class="fa-solid fa-align-right"></i></button>
+                    </fieldset>
+                    <fieldset>
+                   <label for="color-fuente">Color:</label>
                     <input type="color" value="#ff0000" class="color-input" id="color-fuente">
                     <label for="color-fondo-fuente">Fondo</label>
                     <input type="color" value="#efe1d1" class="color-input" id="color-fondo">
+                    </fieldset>
+                   <fieldset>
+                    <input type="checkbox">
+                    <label for="fondo-transparente">Fondo transparente</label>
+                </fieldset>
+                <label for="contorno">Contorno</label>
+                <fieldset>
+
+                </fieldset>
             </aside>
         </div>
     </div>

@@ -83,7 +83,7 @@ span{
     background-color: #A78295;
 }
 .contenedor_aside {
-    font-size: 14px;
+    font-size: 12px;
     width: 16rem;
     padding: 0.5rem;
     margin: 10px 10px;
@@ -94,7 +94,7 @@ span{
     border-radius: 10px;
 }
 input {
-    padding: 10px;
+    padding: 8px;
     display: block;
 }
 .color-input {
@@ -102,6 +102,7 @@ input {
     height: 40px;
     background-color: transparent;
     border: none;
+    display: inline-block;
 }
 .color-input::-webkit-color-swatch {
     border: none;
@@ -127,6 +128,12 @@ input {
     border-radius: 20px;
   
 }
+ .alineacion{
+    color: antiquewhite;
+    border: 2px solid grey;
+width: 50px;
+border-radius: none;
+    }
 main {
     justify-content: center;
     align-items: center;

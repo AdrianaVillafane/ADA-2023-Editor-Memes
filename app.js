@@ -132,7 +132,7 @@ hueSlider.addEventListener("input", () => {
     //obtengo valor del input
     const hueValue = hueSlider.value;
     //aplico en la img
-    memeImg.style.filter = `hue(${hueValue}deg)`;
+    memeImg.style.filter = `hue(${hueRotateValue}deg)`;
     filtros();
 });
 console.log(filtros);

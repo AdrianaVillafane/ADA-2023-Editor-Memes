@@ -3,11 +3,10 @@
     padding: 0;
 }
 body {
-    background-color: #3F2E3E;
+    background-color: #3f2e3e;
     display: flex;
     font-family: "Montserrat", sans-serif;
     justify-content: flex-end;
-  
 }
 /*contenedor imagen+texto sup+tex inf*/
 .container {
@@ -17,29 +16,26 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-   
 }
 /*titulo generador meme*/
 header {
     background-color: rgb(16, 6, 26);
-    color: #EFE1D1;
+    color: #efe1d1;
     text-align: center;
-    font-family: 'Kablammo', cursive;
+    font-family: "Kablammo", cursive;
     padding: 10px;
-  
 }
 
 button {
     margin: 5px;
     padding: 5px;
-    border-radius: 20px;
-    background-color: grey;
-    
+    background-color: #a78295;
 }
-.download-btn, .restablecer-btn{
+.download-btn,
+.restablecer-btn {
     margin-left: auto;
-  margin-right: auto;
-  display: block;
+    margin-right: auto;
+    display: block;
 }
 .meme-container {
     width: 100%;
@@ -67,25 +63,25 @@ button {
     text-align: center;
     padding-top: 22px;
 }
-.text-container{
-    background-color: #A78295;
+.text-container {
+    background-color: #a78295;
     color: #331d2c;
     font-size: 30px;
-
 }
-.contenedor-color-input{
+.contenedor-color-input {
     display: flex;
     justify-content: space-between;
 }
 
-span{
+span {
     border: 1px solid grey;
-    background-color: #A78295;
+    background-color: #a78295;
 }
 .contenedor_aside {
     font-size: 12px;
+    line-height: 2;
     width: 16rem;
-    padding: 0.5rem;
+    padding: 0.8rem;
     margin: 10px 10px;
     justify-content: center;
     background-color: #141616;
@@ -113,12 +109,13 @@ input {
     padding: 0;
 }
 .aside-imagen {
-    text-align: left;
+   /*  text-align: left;
     margin: 10px;
     padding: 10px;
       border: 2px solid grey;
     border-radius: 20px;
-  
+  */
+    display: none;
 }
 .aside-texto {
     text-align: left;
@@ -126,14 +123,17 @@ input {
     padding: 10px;
     border: 2px solid grey;
     border-radius: 20px;
-  
 }
- .alineacion{
+.checkbox {
+    display: flex;
+}
+.alineacion {
+    display: flex;
     color: antiquewhite;
     border: 2px solid grey;
-width: 50px;
-border-radius: none;
-    }
+    width: 50px;
+    border-radius: none;
+}
 main {
     justify-content: center;
     align-items: center;

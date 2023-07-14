@@ -152,18 +152,19 @@
                 <label for="superior">SUPERIOR</label>
 
                 <input type="text" id="top-text-input">
-                <fieldset>
+
+                <div class="checkbox">
                     <input type="checkbox" name="text_sup" checked>
                     <label for="chekbox">Sin texto superior</label>
-                    </fielset>
+                </div>
 
-                    <label for=inferior">INFERIOR</label>
-                    <input type="text" id="botton-text-btn">
+                <label for=inferior">INFERIOR</label>
+                <input type="text" id="botton-text-btn">
 
-                    <fieldset>
-                        <input type="checkbox" id="bottom-text-input" name="text_inf" checked>
-                        <label for="chekbox">Sin texto inferior</label>
-                    </fieldset>
+                <div class="checkbox">
+                    <input type="checkbox" id="bottom-text-input" name="text_inf" checked>
+                    <label for="chekbox">Sin texto inferior</label>
+                </div>
 
                     <label for="fuente">FUENTE</label>
 
@@ -179,30 +180,48 @@
                         <option value="times new roman">Times New Roman</option>
                     </select>
 
-                    <selec name="font-size" id="font-size">
-                        <input type="number" id="font-size" name="font-size" min="12" max="100">
 
+
+                    <div class="alineacion">
+                        <selec name="font-size" id="font-size">
+                            <input type="number" id="font-size" name="font-size" min="12" max="60">
+
+                        </selec>
+                        <button class="alineacion"> <i class="fa-solid fa-align-left"></i></button>
+                        <button class="alineacion"><i class="fa-solid fa-align-center"></i></button>
+                        <button class="alineacion"> <i class="fa-solid fa-align-right"></i></button>
+                    </div>
+                    <div class="color-fuente-fondo">
+                        <label for="color-fuente">Color:</label>
+                        <input type="color" value="#ff0000" class="color-input" id="color-fuente">
+                        <label for="color-fondo-fuente">Fondo</label>
+                        <input type="color" value="#efe1d1" class="color-input" id="color-fondo">
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <label for="fondo-transparente">Fondo transparente</label>
+                    </div>
+                    <label for="contorno">Contorno</label>
+                    <div>
+                        <button>Ninguno</button>
+                        <button>Claro</button>
+                        <button>Oscuro</button>
+                    </div>
+                    <label for="espaciado">Espaciado</label>
+                    <selec name="espaciado" id="espaciado">
+                        <input type="number" id="font-spacing" name="font-spacing" min="10" max="50">
                     </selec>
-
-                    <fieldset>
-                       <button class="alineacion"> <i class="fa-solid fa-align-left"></i></button>
-                       <button class="alineacion"><i class="fa-solid fa-align-center"></i></button> 
-                       <button class="alineacion">  <i class="fa-solid fa-align-right"></i></button>
-                    </fieldset>
-                    <fieldset>
-                   <label for="color-fuente">Color:</label>
-                    <input type="color" value="#ff0000" class="color-input" id="color-fuente">
-                    <label for="color-fondo-fuente">Fondo</label>
-                    <input type="color" value="#efe1d1" class="color-input" id="color-fondo">
-                    </fieldset>
-                   <fieldset>
-                    <input type="checkbox">
-                    <label for="fondo-transparente">Fondo transparente</label>
-                </fieldset>
-                <label for="contorno">Contorno</label>
-                <fieldset>
-
-                </fieldset>
+                    <label for="interlineado">Interlineado:</label>
+                    <div>
+                        <select id="interlineado" name="interlineado">
+                            <option value="0.8">0.8</option>
+                            <option value="1">1</option>
+                            <option value="1.2">1.2</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="2.5">2.5</option>
+                        </select>
+                    </div>
             </aside>
         </div>
     </div>

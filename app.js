@@ -1,3 +1,27 @@
+//Cambio aside funcionando
+const textButton = document.getElementById("text-btn");
+const imgButton = document.getElementById("img-btn");
+const modeButton = document.getElementById("mode-btn");
+
+const textAside = document.getElementById("aside-text");
+const imgAside = document.getElementById("aside-img");
+const mainContainer = document.getElementById("container");
+
+//const bothAsides = document.getElementsByClassName("aside");
+
+textButton.addEventListener("click", () => hideTextAside());
+imgButton.addEventListener("click", () => hideImgAside());
+modeButton.addEventListener("click", () => changeMode());
+
+const hideTextAside = () => {
+  imgAside.classList.add("hidden");
+  textAside.classList.remove("hidden");
+};
+
+const hideImgAside = () => {
+  textAside.classList.add("hidden");
+  imgAside.classList.remove("hidden");
+};
 //URL
 
 const urlInput = document.getElementById("url-input");
@@ -125,12 +149,12 @@ sepiaSlider.addEventListener("input", () => {
 });
 //HUE
 //datos
-const hueSlider = document.getElementById("hue-slider");
+const hueRotateSlider = document.getElementById("hue-slider");
 //evento
 
-hueSlider.addEventListener("input", () => {
+hueRotateSlider.addEventListener("input", () => {
     //obtengo valor del input
-    const hueValue = hueSlider.value;
+    const hueRotateValue = hueRotateSlider.value;
     //aplico en la img
     memeImg.style.filter = `hue(${hueRotateValue}deg)`;
     filtros();
@@ -195,8 +219,8 @@ const fontSelector = document.getElementById("font-selector");
 console.log(fontSelector.value);
 
 const changeFontFamily = () => {
-  topText.style.fontFamily = `${fontSelector.value}`;
-  bottomText.style.fontFamily = `${fontSelector.value}`;
+  topTextInput.style.fontFamily = `${fontSelector.value}`;
+  bottomTextInput.style.fontFamily = `${fontSelector.value}`;
 };
 
 fontSelector.addEventListener("change", () => changeFontFamily());

@@ -35,7 +35,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container modo-dark  modo-barbie">
         <header>
             <div class="encabezado">
                 <h1>Generador de Memes</h1>
@@ -77,9 +77,9 @@
         </main>
 
     </div>
-    <div class="contenedor_aside">
-        <div class="aside-imagen">
-            <aside class="imagen anverso_hidden">
+    <div class="aside-container">
+        <div class="aside" id="aside-img">
+           <aside>
                 <div class="xBoton">
                     <button type="button"><i class="fa-solid fa-xmark" id="xImg"></i></button>
                 </div>
@@ -138,12 +138,8 @@
             </aside>
         </div>
 
-
-
-
-
-        <div class="aside-texto">
-            <div class="texto reverso_hidden">
+        <div class="aside  hidden" id="aside-text">
+            <aside>
                 <button type="button">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
@@ -159,15 +155,15 @@
                 </div>
 
                 <label for="inferior">INFERIOR</label>
-                <input type="text" id="botton-text-btn">
+                <input type="text" id="bottom-text-input">
 
                 <div class="checkbox">
                     <input type="checkbox" id="bottom-text-input" name="text_inf" checked>
                     <label for="chekbox">Sin texto inferior</label>
                 </div>
 
-                    <label for="fuente">FUENTE</label>
-<div>
+                <label for="fuente">FUENTE</label>
+                <div>
                     <select name="font-family" id="font-selector">
                         <option value="arial">Arial</option>
                         <option value="arial black">Arial Black</option>
@@ -179,54 +175,51 @@
                         <option value="verdana">Verdana</option>
                         <option value="times new roman">Times New Roman</option>
                     </select>
-</div>
-
-
-                    <div class="alineacion">
-                        <selec name="font-size" >
-                            <input type="number" id="font-size" name="font-size" min="12" max="60">
-
-                        </selec>
-                        <button type="button" class="alineacion"> <i class="fa-solid fa-align-left"></i></button>
-                        <button type="button" class="alineacion"><i class="fa-solid fa-align-center"></i></button>
-                        <button type="button" class="alineacion"> <i class="fa-solid fa-align-right"></i></button>
-                    </div>
-                    <div class="color-fuente-fondo">
-                        <label for="color-fuente">Color:</label>
-                        <input type="color" value="#ff0000" class="color-input" id="color-fuente">
-                        <label for="color-fondo-fuente">Fondo</label>
-                        <input type="color" value="#efe1d1" class="color-input" id="color-fondo">
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox">
-                        <label for="fondo-transparente">Fondo transparente</label>
-                    </div>
-                    <label for="contorno">Contorno</label>
-                    <div>
-                        <button type="button">Ninguno</button>
-                        <button type="button">Claro</button>
-                        <button type="button">Oscuro</button>
-                    </div>
-                    <label for="espaciado">Espaciado</label>
-                    <selec name="spacing" id="espaciado">
-                        <input type="number" id="font-spacing" name="font-spacing" min="10" max="50">
+                </div>
+                <div class="alineacion">
+                    <selec name="font-size">
+                        <input type="number" id="font-size" name="font-size" min="12" max="60">
                     </selec>
-                    <label for="interlineado">Interlineado:</label>
-                    <div>
-                        <select id="interlineado" name="interlineado">
-                            <option value="0.8">0.8</option>
-                            <option value="1">1</option>
-                            <option value="1.2">1.2</option>
-                            <option value="1.5">1.5</option>
-                            <option value="2">2</option>
-                            <option value="2.5">2.5</option>
-                        </select>
-                    </div>
-            </aside>
+                    <button type="button" class="alineacion"> <i class="fa-solid fa-align-left"></i></button>
+                    <button type="button" class="alineacion"><i class="fa-solid fa-align-center"></i></button>
+                    <button type="button" class="alineacion"> <i class="fa-solid fa-align-right"></i></button>
+                </div>
+                <div class="color-fuente-fondo">
+                    <label for="color-fuente">Color:</label>
+                    <input type="color" value="#ff0000" class="color-input" id="color-fuente">
+                    <label for="color-fondo-fuente">Fondo</label>
+                    <input type="color" value="#efe1d1" class="color-input" id="color-fondo">
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <label for="fondo-transparente">Fondo transparente</label>
+                </div>
+                <label for="contorno">Contorno</label>
+                <div>
+                    <button type="button">Ninguno</button>
+                    <button type="button">Claro</button>
+                    <button type="button">Oscuro</button>
+                </div>
+                <label for="espaciado">Espaciado</label>
+                <selec name="spacing" id="espaciado">
+                    <input type="number" id="font-spacing" name="font-spacing" min="10" max="50">
+                </selec>
+                <label for="interlineado">Interlineado:</label>
+                <div>
+                    <select id="interlineado" name="interlineado">
+                        <option value="0.8">0.8</option>
+                        <option value="1">1</option>
+                        <option value="1.2">1.2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2">2</option>
+                        <option value="2.5">2.5</option>
+                    </select>
+                </div>
+                </aside>
+            </div>
         </div>
-    </div>
 
-    <script src="app.js"></script>
+        <script src="app.js"></script>
 
 </body>
 

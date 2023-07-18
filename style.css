@@ -78,7 +78,7 @@ span {
     border: 1px solid grey;
     background-color: #a78295;
 }
-.contenedor_aside {
+.aside-container {
     font-size: 12px;
    
     width: 16rem;
@@ -110,22 +110,19 @@ input {
     border-radius: 50%;
     padding: 0;
 }
-.aside-imagen {
-   /*  text-align: left;
+.aside {
+     text-align: left;
     margin: 10px;
     padding: 10px;
       border: 2px solid grey;
     border-radius: 20px;
-  */
-    display: none;
+    line-height: 1.8;
+  
+
 }
-.aside-texto {
-    text-align: left;
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid grey;
-    border-radius: 20px;
-    line-height: 2.8;
+
+.hidden{
+    display: none;
 }
 .checkbox {
     display: flex;
@@ -137,6 +134,12 @@ input {
     width: 50px;
     border-radius: none;
 }
+#interlineado, #font-selector, #font-spacing{
+    background-color: #383838;
+    font-size: 20px;
+    width: 200px;
+}
+
 main {
     justify-content: center;
     align-items: center;

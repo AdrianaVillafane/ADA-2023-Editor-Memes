@@ -1,4 +1,4 @@
-//Cambio aside funcionando
+//Cambio aside (funcionando)
 const textButton = document.getElementById("text-btn");
 const imgButton = document.getElementById("img-btn");
 const modeButton = document.getElementById("mode-btn");
@@ -149,7 +149,7 @@ sepiaSlider.addEventListener("input", () => {
 });
 //HUE
 //datos
-const hueRotateSlider = document.getElementById("hue-slider");
+const hueRotateSlider = document.getElementById("hue-rotate-slider");
 //evento
 
 hueRotateSlider.addEventListener("input", () => {
@@ -186,16 +186,6 @@ invertSlider.addEventListener("input", () => {
     filtros();
 });
 
-//TEXTO
-
-const topTextInput = document.getElementById("top-text-input");
-const bottomTextInput = document.getElementById("bottom-text-input");
-
-const topText = document.getElementById("top-text");
-const bottomText = document.getElementById("bottom-text");
-
-topTextInput.addEventListener("change", () => hideTopText());
-bottomTextInput.addEventListener("change", () => hideBottomText());
 
 //DESCARGA MEME
 
@@ -212,15 +202,32 @@ const downloadMeme = () => {
 
 
 
+//TEXTO
+
+const topTextInput = document.getElementById("top-text-input");
+const bottomTextInput = document.getElementById("bottom-text-input");
+
+const topText = document.getElementById("top-text");
+const bottomText = document.getElementById("bottom-text");
+
+topTextInput.addEventListener("change", () => hideTopText("top-text"));
+bottomTextInput.addEventListener("change", () => hideBottomText("bottom-text"));
 
 
+const hideTopText = () => {
+    topText.classList.add("top-text");
+    
+  };
+  const hideBottomText = () => {
+    bottomText.classList.add("bottom-text")
+  }
 //fuentes
 const fontSelector = document.getElementById("font-selector");
 console.log(fontSelector.value);
 
 const changeFontFamily = () => {
-  topTextInput.style.fontFamily = `${fontSelector.value}`;
-  bottomTextInput.style.fontFamily = `${fontSelector.value}`;
+  topText.style.fontFamily = `${fontSelector.value}`;
+  bottomText.style.fontFamily = `${fontSelector.value}`;
 };
 
 fontSelector.addEventListener("change", () => changeFontFamily());

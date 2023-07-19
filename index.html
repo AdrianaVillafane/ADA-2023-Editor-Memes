@@ -64,7 +64,7 @@
                 <p class="text-container textoSuperior" id="top-text">TOP TEXT</p>
 
                 <div id="meme-img" class="meme-img">
-                    .
+                    
                 </div>
                 <p class="text-container textoInferior" id="bottom-text">
                     BOTTOM TEXT
@@ -79,7 +79,7 @@
     </div>
     <div class="aside-container">
         <div class="aside" id="aside-img">
-           <aside>
+            <aside>
                 <div class="xBoton">
                     <button type="button"><i class="fa-solid fa-xmark" id="xImg"></i></button>
                 </div>
@@ -94,16 +94,17 @@
                 <div class="contenedor-color-input">
                     <input type="color" value="#ff0000" class="color-input" id="color-picker">
                     <span id="color-name"></span>
-                </div>
-                <select name="fondo" id="filtros-fondo">
-                    <option value="ninguno">Ninguno</option>
-                    <option value="aclarar">Aclarar</option>
-                    <option value="oscurecer">Oscurecer</option>
-                    <option value="diferencia">Diferencia</option>
-                    <option value="luminosidad">Luminosidad</option>
-                    <option value="multiplicar">Multiplicar</option>
 
-                </select>
+                    <select name="fondo" id="filtros-fondo">
+                        <option value="ninguno">Ninguno</option>
+                        <option value="aclarar">Aclarar</option>
+                        <option value="oscurecer">Oscurecer</option>
+                        <option value="diferencia">Diferencia</option>
+                        <option value="luminosidad">Luminosidad</option>
+                        <option value="multiplicar">Multiplicar</option>
+
+                    </select>
+                </div>
                 <h2>FILTROS</h2>
 
                 <label for="brillo">BRILLO</label>
@@ -113,7 +114,7 @@
                 <input type="range" min="0" max="1" value="1" step="0.1" class="myRange" id="opacity-slider">
 
                 <label for="contraste">CONTRASTE</label>
-                <input type="range" min="100%" max="1000%" value="100" step="100" class="myRange" id="contrast-slider">
+                <input type="range" min="100" max="1000" value="100" step="100" class="myRange" id="contrast-slider">
 
                 <label for="desenfoque">DESENFOQUE</label>
                 <input type="range" min="0" max="10" value="0" step="0.1" class="myRange" id="blur-slider">
@@ -125,7 +126,7 @@
                 <input type="range" min="0" max="100" value="0" step="1" class="myRange" id="sepia-slider">
 
                 <label for="hue">HUE</label>
-                <input type="range" min="0" max="359" value="0" step="1" class="myRange" id="hue-slider">
+                <input type="range" min="0" max="359" value="0" step="1" class="myRange" id="hue-rotate-slider">
 
                 <label for="saturacion">SATURADO</label>
                 <input type="range" min="100" max="1000" value="100" step="10" class="myRange" id="saturation-slider">
@@ -133,7 +134,7 @@
                 <label for="negativo">NEGATIVO</label>
                 <input type="range" min="0" max="1" value="1" step="0.1" class="myRange" id="invert-slider">
 
-                <button type="button" class="restablecer-btn">Reestablecer Filtros</button>
+                <button type="reset" class="restablecer-btn">Reestablecer Filtros</button>
 
             </aside>
         </div>
@@ -150,36 +151,36 @@
                 <input type="text" id="top-text-input">
 
                 <div class="checkbox">
-                    <input type="checkbox" name="text_sup" checked>
-                    <label for="chekbox">Sin texto superior</label>
+                    <input type="checkbox" name="text_sup" >
+                    <label for="checkbox">Sin texto superior</label>
                 </div>
 
                 <label for="inferior">INFERIOR</label>
                 <input type="text" id="bottom-text-input">
 
                 <div class="checkbox">
-                    <input type="checkbox" id="bottom-text-input" name="text_inf" checked>
-                    <label for="chekbox">Sin texto inferior</label>
+                    <input type="checkbox"  name="text_inf" >
+                    <label for="checkbox">Sin texto inferior</label>
                 </div>
 
                 <label for="fuente">FUENTE</label>
-                <div>
+               
                     <select name="font-family" id="font-selector">
                         <option value="arial">Arial</option>
                         <option value="arial black">Arial Black</option>
                         <option value="american typewriter">American Typewriter</option>
-                        <option value="andale mono">Andale Mono</option>
                         <option value="comic sans ms">Comic Sans MS</option>
                         <option value="helvetica">Helvetica</option>
                         <option value="impact">Impact</option>
                         <option value="verdana">Verdana</option>
                         <option value="times new roman">Times New Roman</option>
                     </select>
-                </div>
+            
                 <div class="alineacion">
                     <selec name="font-size">
                         <input type="number" id="font-size" name="font-size" min="12" max="60">
                     </selec>
+                   
                     <button type="button" class="alineacion"> <i class="fa-solid fa-align-left"></i></button>
                     <button type="button" class="alineacion"><i class="fa-solid fa-align-center"></i></button>
                     <button type="button" class="alineacion"> <i class="fa-solid fa-align-right"></i></button>
@@ -215,11 +216,11 @@
                         <option value="2.5">2.5</option>
                     </select>
                 </div>
-                </aside>
-            </div>
+            </aside>
         </div>
+    </div>
 
-        <script src="app.js"></script>
+    <script src="app.js"></script>
 
 </body>
 

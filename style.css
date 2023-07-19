@@ -80,7 +80,7 @@ span {
 }
 .aside-container {
     font-size: 12px;
-   
+
     width: 16rem;
     padding: 0.8rem;
     margin: 10px 10px;
@@ -111,17 +111,15 @@ input {
     padding: 0;
 }
 .aside {
-     text-align: left;
+    text-align: left;
     margin: 10px;
     padding: 10px;
-      border: 2px solid grey;
+    border: 2px solid grey;
     border-radius: 20px;
     line-height: 1.8;
-  
-
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 .checkbox {
@@ -134,7 +132,9 @@ input {
     width: 50px;
     border-radius: none;
 }
-#interlineado, #font-selector, #font-spacing{
+#interlineado,
+#font-selector,
+#font-spacing {
     background-color: #383838;
     font-size: 20px;
     width: 200px;
@@ -143,4 +143,7 @@ input {
 main {
     justify-content: center;
     align-items: center;
+}
+.alineacion{
+    border: none;
 }

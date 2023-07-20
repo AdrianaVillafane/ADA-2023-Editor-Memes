@@ -7,7 +7,7 @@ const textAside = document.getElementById("aside-text");
 const imgAside = document.getElementById("aside-img");
 const mainContainer = document.getElementById("container");
 
-//const bothAsides = document.getElementsByClassName("aside");
+const bothAsides = document.getElementsByClassName("aside");
 
 textButton.addEventListener("click", () => hideTextAside());
 imgButton.addEventListener("click", () => hideImgAside());
@@ -22,6 +22,17 @@ const hideImgAside = () => {
   textAside.classList.add("hidden");
   imgAside.classList.remove("hidden");
 };
+//cambio modo
+const changeMode = () => {
+       bothAsides[0].classList.add("modo-dark");
+      bothAsides[1].classList.add("modo-dark");
+       console.log(bothAsides);
+       textAside.classList.toggle("aside-container");
+       imgAside.classList.toggle("aside-container");
+       mainContainer.classList.toggle("modo-dark");
+     };
+    
+  
 //URL
 
 const urlInput = document.getElementById("url-input");
